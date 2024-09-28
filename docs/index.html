@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Formulario - Vendas</title>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <header class="borda">
+                <h3>Cadastre seu veiculo para vender mais rapido!</h3>
+            </header>
+        </div>
+        <div class="form-container">
+            <div class="form-header">
+                <p>Formulario</p>
+            </div>
+            <div class="form-body">
+                <h1 class="form-title">Venda facil seu carro!</h1>
+                <p>Descreva as estatisticas e marque os opcionais que ele possui</p>
+
+                <form>
+                    <div class="box-input">
+                        <label for="title">titulo do anuncio <span class="required-fild">*</span></label>
+                        <input type="text" name="title" id="title" class="block"
+                            placeholder="Insira o título do anuncio" minlength="5" max="30" required>
+                    </div>
+                    <div class="box-input">
+                        <label for="price">Preço<span class="required-fild">*</span></label>
+                        <input type="number" name="price" id="price" class="block" placeholder="Defina o preço"
+                            required>
+                    </div>
+                    <div class="box-input">
+                        <label for="description">Descrição<span class="required-fild">*</span></label>
+                        <textarea name="description" id="description" class="block"
+                            placeholder="Detalhes do veiculo"></textarea>
+                    </div>
+                    <div class="box-input">
+                        <label for="brand">Marca<span class="required-fild">*</span></label>
+                        <input type="number" name="brand" id="brand" class="block" placeholder="Insira a marca"
+                            required>
+                    </div>
+                    <div class="box-input">
+                    <label for="model">Modelo<span class="required-fild">*</span></label>
+                    <input type="text" name="model" id="model" class="block" placeholder="Insira o modelo" required>
+                    </div>
+                    <div class="box-input">
+                        <label for="mileage">Kilometragem<span class="required-fild">*</span></label>
+                        <input type="number" name="mileage" id="mileage" class="block"
+                            placeholder="Insira a kilometragem do veiculo" required>
+                    </div>
+                    <div class="box-input">
+                        <label for="purchase-date">Data de compra<span class="required-fild">*</span></label>
+                        <input type="date" name="purchase-date" id="purchase-date" class="block" required>
+                    </div>
+                    <div class="box-input">
+                        <p>Tipo de câmbios: <span class="required-fild">*</span></p>
+                        <input type="radio" name="gear" id="manual">
+                        <label for="manual">Manual</label>
+                        <input type="radio" name="gear" id="auto">
+                        <label for="auto">Automático</label>
+                    </div>
+
+                    <div class="optional-box">
+                        <p>Lista opcional</p>
+                        <ul class="optional-list">
+                            <li> <!--OPTIONAL[] para receber varios dados no backend-->
+                                <input type="checkbox" name="optional[]" id="airbag" value="airbag">
+                                <label for="airbag">Air Bag</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="optional[]" id="alarm" value="alarm">
+                                <label for="alarm">Alarme</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="optional[]" id="ac" value="ac">
+                                <label for="ac">Ar Condicionado</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="optional[]" id="reverseCam" value="reverseCam">
+                                <label for="reverseCam">Câmera Traseira</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="optional-box">
+                        <ul class="optional-list">
+                            <li> <!--OPTIONAL[] para receber varios dados no backend-->
+                                <input type="checkbox" name="optional[]" id="laneAssist" value="laneAssist">
+                                <label for="laneAssist">Assistente de Pista</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="optional[]" id="keyLess" value="keyLess">
+                                <label for="keyLess">Partida Keyless</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="optional[]" id="smartphone" value="smartphone">
+                                <label for="smartphone">Integrassão com o celular</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="optional[]" id="letterSeat" value="letterSeat">
+                                <label for="letterSeat">Banco de Couro</label>
+                            </li>
+                        </ul>
+                    </div class="box-input">
+                    <p>Fotos do carro <span class="required-fild">*</span></p>
+                    <input type="file" multiple accept="image/png, imag/jpg" id="image" name="image" required>
+                    <input type="submit" value="Enviar" class="btn-submit">
+            </div>
+        </div>
+        </form>
+    </div>
+    </div>
+</body>
+
+</html>
